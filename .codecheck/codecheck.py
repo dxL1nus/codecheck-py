@@ -69,13 +69,13 @@ class Codecheck:
     def title(self):
         """
         Markdown title with the certificate number, the doi of the report, and the CODECHECK
-        logo. The logo is expected to be stored as `codecheck_logo.png` in the current
+        logo. The logo is expected to be stored as `codecheck_logo.svg` in the current
         directory.
         """
         return Markdown(
-            f"""# CODECHECK certificate {self.conf['certificate']}{{-}}
-## [{self.conf['report'].split('://')[1]}]({self.conf['report']}) {{-}}
-[![CODECHECK logo](codecheck_logo.png)](https://codecheck.org.uk)"""
+            f"""# CODECHECK certificate {self.conf['certificate']}
+## [{self.conf['report'].split('://')[1]}]({self.conf['report']})
+[![CODECHECK logo](codecheck_logo.svg)](https://codecheck.org.uk)"""
         )
 
     def summary_table(self):
