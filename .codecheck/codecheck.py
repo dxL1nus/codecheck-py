@@ -73,8 +73,8 @@ class Codecheck:
         directory.
         """
         return Markdown(
-            f"""# CODECHECK certificate {self.conf['certificate']}{{-}}
-## [{self.conf['report'].split('://')[1]}]({self.conf['report']}) {{-}}
+            f"""# CODECHECK certificate {self.conf['certificate']}
+## [{self.conf['report'].split('://')[1]}]({self.conf['report']})
 [![CODECHECK logo](codecheck_logo.png)](https://codecheck.org.uk)"""
         )
 
