@@ -34,7 +34,7 @@ To generate a report from the notebook (which by default hides all the code used
 for the automatic content generation), run:
 
 ```bash
-jupyter nbconvert --to pdf --no-input --no-prompt --execute --LatexExporter.template_file nbconvert_template.tex.j2 codecheck.ipynb
+jupyter nbconvert --to markdown --no-input --no-prompt --execute --LatexExporter.template_file nbconvert_template.tex.j2 codecheck.ipynb
 ```
 
 The `environment.yml` file defines a [conda](https://coda.io) environment that

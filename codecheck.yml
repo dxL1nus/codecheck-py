@@ -1,12 +1,12 @@
 version: https://codecheck.org.uk/spec/config/1.0/
-certificate: YYYY-001
-report: https://doi.org/10.5281/zenodo.XXXXXX
+certificate: 2025-023
+report: https://doi.org/10.5281/zenodo.14900193
 
 paper:
   title: FIXME add title
   authors:
     - name: TODO
-      ORCID: 0000-0000-0000-0000
+      ORCID: 0123-4567-8910-1112
   reference: https://doi.org/10.1234/example
 
 repository: https://github.com/example/repo
@@ -15,7 +15,7 @@ summary: TODO add summary
 
 codechecker:
   name: FIXME
-  ORCID: 0000-0000-0000-0000
+  ORCID: 0123-4567-8910-1112
 
 manifest:
   - file: example_output.txt
