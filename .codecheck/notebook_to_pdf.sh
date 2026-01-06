@@ -23,6 +23,7 @@ done
 
 echo "[CODECHECK - Py] $MARKDOWN_FILE found."
 
-# Start Typst watch
-echo "[CODECHECK - Py] Starting typst watch..."
-typst watch "${NOTEBOOK}.typ"
+# Start Typst compile
+echo "[CODECHECK - Py] Compiling $NOTEBOOK.typ to PDF..."
+typst compile "${NOTEBOOK}.typ"
+echo "[CODECHECK - Py] Done compiling!"
