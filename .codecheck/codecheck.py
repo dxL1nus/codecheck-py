@@ -75,7 +75,7 @@ class Codecheck:
         return Markdown(
             f"""# CODECHECK certificate {self.conf['certificate']}
 ## [{self.conf['report'].split('://')[1]}]({self.conf['report']})
-[![CODECHECK logo](codecheck_logo.png)](https://codecheck.org.uk)"""
+[![CODECHECK logo](codecheck_logo.svg)](https://codecheck.org.uk)"""
         )
 
     def summary_table(self):

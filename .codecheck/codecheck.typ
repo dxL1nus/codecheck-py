@@ -4,19 +4,7 @@
 #set text(
   lang: "en",
 )
-#set page(
-  header: context {
-    if counter(page).get().at(0) == 1 {
-      rect(stroke: (bottom: black), text(size: 10pt, [#h(1fr)#counter(page).display()]))
-    } else {
-      if calc.rem(counter(page).get().at(0), 2) == 0 {
-        rect(stroke: (bottom: black), text(size: 10pt, [#counter(page).display()#h(1fr)#document.author.join(", ")]))
-      } else {
-        rect(stroke: (bottom: black), text(size: 10pt, [#document.title#h(1fr)#counter(page).display()]))
-      }
-    }
-  }
-)
+#set page("a4", numbering: "1")
 
 #show figure.caption: set text(size: 10pt)
 
@@ -34,8 +22,10 @@
   stroke: frame(1pt + black),   // no default table borders
   inset: (right: 1.5em), // cell padding
   fill: none,     // no background
-  columns: (auto, auto),
+  columns: (auto, auto, 0.25fr),
 )
+
+#show table.cell: set text(size: 10pt)
 
 #show table: t => {
   if t.columns.all(c => c == auto) {
@@ -44,6 +34,8 @@
     t
   }
 }
+
+#show link: set text(blue)
 
 #cmarker.render(
   read("codecheck.md"),

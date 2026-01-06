@@ -1,6 +1,6 @@
 # CODECHECK certificate 2025-023
 ## [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
-[![CODECHECK logo](codecheck_logo.png)](https://codecheck.org.uk)
+[![CODECHECK logo](codecheck_logo.svg)](https://codecheck.org.uk)
 
 
 
@@ -73,7 +73,7 @@ This certificate confirms that the codechecker could independently reproduce the
 
 
 ## About this document
-This document was created using a [jupyter notebook](https://jupyter.org/) and converted into PDF via [nbconvert](https://nbconvert.readthedocs.io/), [pandoc](https://pandoc.org/), and [xelatex](http://xetex.sourceforge.net/). 
+This document was created using a [jupyter notebook](https://jupyter.org/) and converted into Markdown via [nbconvert](https://nbconvert.readthedocs.io/) nd [pandoc](https://pandoc.org/). Afterwards it was converted into [Typst](https://typst.app/) using [cmarker](https://typst.app/universe/package/cmarker/) and then into PDF using Typst.
 
 ## License
 The code, data, and figures created by the original authors are licensed under the ... license (see their [LICENSE file](https://github.com/codecheckers/causality-review/blob/main/LICENSE)). The content of the `codecheck` directory and this report are licensed under the ... license.
