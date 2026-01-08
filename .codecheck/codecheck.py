@@ -17,6 +17,14 @@ def name_orcid(entry):
     """Helper function for Name + ORCID"""
     return f"{entry['name']} (ORCID: [{entry['ORCID']}](https://orcid.org/{entry['ORCID']}))"
 
+def multiple_name_orcid(entries):
+    """Helper function for multiple people to return their Name + ORCID"""
+    return f"{'<br>'.join([name_orcid(a) for a in entries])}"
+
+def multiple_name(entries):
+    """Helper function for multiple people to return their Name + ORCID"""
+    return f"{'<br>'.join([a['name'] for a in entries])}"
+
 
 class Codecheck:
     """
@@ -89,10 +97,10 @@ Item | Value
 """
         summary_rows = [
             f"Title | *{self.conf['paper']['title']}*",
-            f"Authors | {', '.join([name_orcid(a) for a in self.conf['paper']['authors']])}",
+            f"Authors | {multiple_name_orcid(self.conf['paper']['authors'])}",
             f"Reference | [{self.conf['paper']['reference'].split('://')[1]}]({self.conf['paper']['reference']})",
             f"Repository | [{self.conf['repository'].split('://')[1]}]({self.conf['repository']})",
-            f"Codechecker | {name_orcid(self.conf['codechecker'])}",
+            f"Codechecker | {multiple_name_orcid(self.conf['codechecker'])}",
             f"Date of check | {datetime.fromisoformat(self.conf['check_time']).date()}",
             f"Summary | {self.conf['summary'].strip()}",
         ]
@@ -112,7 +120,7 @@ Item | Value
         # Note that the &nbsp; below are used to work around the fact that pandoc seems to
         # calculate the column width for the LaTeX output based on the length of the headers
         files_header = """
-File&nbsp;&nbsp;&nbsp; | Comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp | Size (b)
+File | Comment | Size (b)
 :--------------------- | :----------------------------------- | -------:
 """
         files_rows = [
@@ -139,7 +147,7 @@ File&nbsp;&nbsp;&nbsp; | Comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp | Size (b)
         Markdown citation for this CODECHECK.
         """
         return Markdown(
-            f"{self.conf['codechecker']['name']} "
+            f"{multiple_name(self.conf['codechecker'])} "
             f"({datetime.fromisoformat(self.conf['check_time']).year}). "
             f"CODECHECK Certificate {self.conf['certificate']}. "
             f"Zenodo. [{self.conf['report'].split('://')[1]}]({self.conf['report']})"
