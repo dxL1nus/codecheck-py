@@ -4,7 +4,7 @@
 
 
 
-## CODECHECK summary
+## Table 1: CODECHECK summary
 
 
 
@@ -16,19 +16,19 @@ Title | *FIXME add title*
 Authors | TODO (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))
 Reference | [doi.org/10.1234/example](https://doi.org/10.1234/example)
 Repository | [github.com/example/repo](https://github.com/example/repo)
-Codechecker | FIXME (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))
+Codechecker | FIXME (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))<br>SOMEONE ELSE (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))
 Date of check | 2023-11-15
 Summary | TODO add summary
 
 
 
-## Summary of output files generated
+## Table 2: Summary of output files generated
 
 
 
 
 
-File&nbsp;&nbsp;&nbsp; | Comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp | Size (b)
+File | Comment | Size (b)
 :--------------------- | :----------------------------------- | -------:
 `example_output.txt` | Example output file - replace with actual outputs | 0
 
@@ -58,7 +58,7 @@ yooooo
 
 
 
-FIXME (2023). CODECHECK Certificate 2025-023. Zenodo. [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
+FIXME<br>SOMEONE ELSE (2023). CODECHECK Certificate 2025-023. Zenodo. [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
 
 
 

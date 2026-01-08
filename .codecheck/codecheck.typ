@@ -10,6 +10,7 @@
 
 #set text(font: "New Computer Modern")
 
+// style the tables
 // See the strokes section for details on this!
 #let frame(stroke) = (x, y) => (
   left: none,
@@ -35,10 +36,16 @@
       ..t.children
     )
   } else if t.columns.all(c => c == auto) and t.columns.len() == 2 {
-    table(
-      columns: (1fr, 1.5fr),
-      align: t.align,
-      ..t.children
+    align(
+      center,
+      block(
+        width: 80%,
+        table(
+          columns: (1fr, 1.5fr),
+          align: t.align,
+          ..t.children
+        )
+      )
     )
   } else if t.columns.all(c => c == auto) {
     table(columns: (1fr,) * t.columns.len(), align: t.align, ..t.children)
@@ -47,7 +54,50 @@
   }
 }
 
+// make links blue
 #show link: set text(blue)
+
+// center the first headings
+#let heading_index = counter("heading_index");
+#show heading: h => {
+  // counter("heading_index").display()
+  heading_index.step()
+  if h.level == 1 and heading_index.get().at(0) < 1 {
+    set text(size: 1.2em)
+    align(
+      center,
+      h
+    )
+  } else if h.level == 2 and heading_index.get().at(0) < 4 {
+    align(
+      center,
+      h
+    )
+  } else {
+    h
+  }
+}
+
+// center the codecheck logo
+#show image: img => {
+  if img.source.ends-with(".svg") {
+    block(
+       height: 2em,     
+    )
+    align(
+      center,
+      block(
+        width: 30%,
+        img,
+      )
+    )
+    block(
+       height: 2em,     
+    )
+  } else {
+    img
+  }
+}
 
 #cmarker.render(
   read("codecheck.md"),
