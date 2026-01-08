@@ -28,7 +28,19 @@
 #show table.cell: set text(size: 10pt)
 
 #show table: t => {
-  if t.columns.all(c => c == auto) {
+  if t.columns.all(c => c == auto) and t.columns.len() == 3 {
+    table(
+      columns: (2fr, 3fr, 0.8fr),
+      align: t.align,
+      ..t.children
+    )
+  } else if t.columns.all(c => c == auto) and t.columns.len() == 2 {
+    table(
+      columns: (1fr, 1.5fr),
+      align: t.align,
+      ..t.children
+    )
+  } else if t.columns.all(c => c == auto) {
     table(columns: (1fr,) * t.columns.len(), align: t.align, ..t.children)
   } else {
     t
