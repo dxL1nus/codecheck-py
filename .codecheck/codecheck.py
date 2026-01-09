@@ -214,14 +214,11 @@ This certificate confirms that the codechecker could independently reproduce the
             comment = entry["comment"]
             full_text.extend(
                 [
-                    r"\begin{figure}" r"\texttt{" + fname.replace("_", r"\_") + r"}.\\",
-                    r"Author comment: \emph{" + comment + r"}\\",
-                    r"\includegraphics{outputs/" + fname + r"}",
-                    r"\end{figure}",
+                    r"![" + r"Author comment: " + comment + r"]" + r"(outputs/" + fname + r")",
                     "",
                 ]
             )
-        return Latex("\n".join(full_text))
+        return Markdown("\n".join(full_text))
 
     def validate(self, check_manifest=True, check_register=True, strict=False):
         """
