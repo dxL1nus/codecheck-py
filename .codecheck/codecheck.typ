@@ -26,7 +26,7 @@
   columns: (auto, auto, 0.25fr),
 )
 
-#show table.cell: set text(size: 10pt)
+#show table.cell: set text(size: 9pt)
 
 #show table: t => {
   if t.columns.all(c => c == auto) and t.columns.len() == 3 {
@@ -41,7 +41,7 @@
       block(
         width: 80%,
         table(
-          columns: (1fr, 1.5fr),
+          columns: (1fr, 2.5fr),
           align: t.align,
           ..t.children
         )

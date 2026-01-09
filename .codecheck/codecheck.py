@@ -15,7 +15,10 @@ from manifest import ManifestProcessor
 
 def name_orcid(entry):
     """Helper function for Name + ORCID"""
-    return f"{entry['name']} (ORCID: [{entry['ORCID']}](https://orcid.org/{entry['ORCID']}))"
+    if 'ORCID' in entry:
+        return f"{entry['name']} (ORCID: [{entry['ORCID']}](https://orcid.org/{entry['ORCID']}))"
+    else:
+        return entry['name']
 
 def multiple_name_orcid(entries):
     """Helper function for multiple people to return their Name + ORCID"""
@@ -179,7 +182,7 @@ This certificate confirms that the codechecker could independently reproduce the
                 continue
             comment = entry.get("comment", None)
             df = pd.read_csv(op.join("outputs", fname), **kwds)
-            markdown = f"""### `{fname}` {{-}}
+            markdown = f"""### `{fname}`
 {('Author comment: *' + comment + '*') if comment else ' '}
 
 **Column summary statistics:**
