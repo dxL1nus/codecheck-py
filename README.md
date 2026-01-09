@@ -34,7 +34,8 @@ To generate a report from the notebook (which by default hides all the code used
 for the automatic content generation), run:
 
 ```bash
-jupyter nbconvert --to markdown --no-input --no-prompt --execute --LatexExporter.template_file nbconvert_template.tex.j2 codecheck.ipynb
+cd codecheck
+sh notebook_to_pdf.sh
 ```
 
 The `environment.yml` file defines a [conda](https://coda.io) environment that
@@ -83,12 +84,14 @@ repository-root/
 └── codecheck/                      # CODECHECK materials (this template)
     ├── codecheck.py                # Helper module
     ├── codecheck.ipynb             # Certificate notebook
+    ├── codecheck.typ               # Typst template (containing the PDF styling)
+    ├── codecheck.md                # Generated Markdown file
     ├── validation.py               # Validation module (NEW)
     ├── validation_config.py        # Validation configuration (NEW)
     ├── manifest.py                 # Manifest processing (NEW)
     ├── environment.yml             # Conda environment
     ├── nbconvert_template.tex.j2   # LaTeX template
-    ├── codecheck_logo.png          # CODECHECK logo
+    ├── codecheck_logo.svg          # CODECHECK logo
     ├── codecheck.pdf               # Generated certificate (output)
     └── outputs/                    # Reproduced files from manifest
         ├── figures/
@@ -120,8 +123,7 @@ cp data/results.csv codecheck/outputs/data/results.csv
 # 6. Fill out codecheck.ipynb with your notes
 # 7. Generate the certificate PDF
 cd codecheck
-jupyter nbconvert --to pdf --no-input --no-prompt --execute \
-  --LatexExporter.template_file nbconvert_template.tex.j2 codecheck.ipynb
+sh notebook_to_pdf.sh
 ```
 
 ## Validation Features
