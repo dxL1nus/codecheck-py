@@ -13,7 +13,7 @@
 Item | Value
 :--- | :----
 Title | *FIXME add title*
-Authors | TODO (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))
+Authors | TODO (ORCID: 0123-4567-8910-1112)
 Reference | [doi.org/10.1234/example](https://doi.org/10.1234/example)
 Repository | [github.com/example/repo](https://github.com/example/repo)
 Codechecker | FIXME (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))<br>SOMEONE ELSE (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))
