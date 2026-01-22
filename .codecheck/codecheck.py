@@ -16,7 +16,7 @@ from manifest import ManifestProcessor
 def name_orcid(entry):
     """Helper function for Name + ORCID"""
     if 'ORCID' in entry:
-        return f"{entry['name']} (ORCID: [{entry['ORCID']}](https://orcid.org/{entry['ORCID']}))"
+        return f"{entry['name']} (ORCID: {entry['ORCID']})"
     else:
         return entry['name']
 

@@ -20,13 +20,9 @@
   bottom: stroke,
 )
 
-#let orcid-re = regex(
-  "\(ORCID: ([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4})\)"
-)
-
-#show text: it => it.replace(orcid-re, m => {
-  pubmatter.orcid-link(m.at(1))
-})
+#show regex("\(ORCID: ([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4})\)"): it => {
+  pubmatter.orcid-link(orcid: it.text.trim(regex("\\(ORCID: ")).trim(regex("\\)")))
+}
 
 #set table(
   stroke: frame(1pt + black),   // no default table borders
@@ -92,7 +88,7 @@
 
 // center the codecheck logo
 #show image: img => {
-  if img.source.ends-with(".svg") {
+  if img.source == "codecheck_logo.svg" {
     block(
        height: 2em,     
     )
