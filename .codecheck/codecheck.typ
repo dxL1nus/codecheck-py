@@ -59,8 +59,9 @@
   }
 }
 
-// make links blue
-#show link: set text(blue)
+// make links blue and underlined
+#show link: underline
+#show link: set text(fill: rgb("#467886"))
 
 // center the first headings
 #let heading_index = counter("heading_index");
