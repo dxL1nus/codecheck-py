@@ -100,10 +100,10 @@ Item | Value
 """
         summary_rows = [
             f"Title | *{self.conf['paper']['title']}*",
-            f"Authors | {multiple_name_orcid(self.conf['paper']['authors'])}",
+            f"Author(s) | {multiple_name_orcid(self.conf['paper']['authors'])}",
             f"Reference | [{self.conf['paper']['reference'].split('://')[1]}]({self.conf['paper']['reference']})",
             f"Repository | [{self.conf['repository'].split('://')[1]}]({self.conf['repository']})",
-            f"Codechecker | {multiple_name_orcid(self.conf['codechecker'])}",
+            f"Codechecker(s) | {multiple_name_orcid(self.conf['codechecker'])}",
             f"Date of check | {datetime.fromisoformat(self.conf['check_time']).date()}",
             f"Summary | {self.conf['summary'].strip()}",
         ]

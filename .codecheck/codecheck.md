@@ -13,10 +13,10 @@
 Item | Value
 :--- | :----
 Title | *FIXME add title*
-Authors | TODO (ORCID: 0123-4567-8910-1112)
+Author(s) | TODO (ORCID: 0123-4567-8910-1112)
 Reference | [doi.org/10.1234/example](https://doi.org/10.1234/example)
 Repository | [github.com/example/repo](https://github.com/example/repo)
-Codechecker | FIXME (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))<br>SOMEONE ELSE (ORCID: [0123-4567-8910-1112](https://orcid.org/0123-4567-8910-1112))
+Codechecker(s) | FIXME (ORCID: 0123-4567-8910-1112), SOMEONE ELSE (ORCID: 0123-4567-8910-1112)
 Date of check | 2023-11-15
 Summary | TODO add summary
 
@@ -53,12 +53,10 @@ TODO add summary
 
 ## Citing this document
 
-yooooo
 
 
 
-
-FIXME<br>SOMEONE ELSE (2023). CODECHECK Certificate 2025-023. Zenodo. [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
+FIXME, SOMEONE ELSE (2023). CODECHECK Certificate 2025-023. Zenodo. [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
 
 
 
@@ -73,7 +71,7 @@ This certificate confirms that the codechecker could independently reproduce the
 
 
 ## About this document
-This document was created using a [jupyter notebook](https://jupyter.org/) and converted into Markdown via [nbconvert](https://nbconvert.readthedocs.io/) nd [pandoc](https://pandoc.org/). Afterwards it was converted into [Typst](https://typst.app/) using [cmarker](https://typst.app/universe/package/cmarker/) and then into PDF using Typst.
+This document was created using [codecheck-py](https://github.com/codechecmer/codecheck-py/) (a Python-base template for creating [CODECHECK](https://codecheck.org.uk/) certificates). The CODECHECK details are filled into a [jupyter notebook](https://jupyter.org/) which is then converted into Markdown via [nbconvert](https://nbconvert.readthedocs.io/). Afterwards it gets converted into [Typst](https://typst.app/) using [cmarker](https://typst.app/universe/package/cmarker/) and then into PDF using Typst.
 
 ## License
 The code, data, and figures created by the original authors are licensed under the ... license (see their [LICENSE file](https://github.com/codecheckers/causality-review/blob/main/LICENSE)). The content of the `codecheck` directory and this report are licensed under the ... license.
