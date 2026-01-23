@@ -187,8 +187,7 @@ This certificate confirms that the codechecker could independently reproduce the
 
 **Column summary statistics:**
 
-{df.describe().transpose().to_markdown(tablefmt="grid",
-                                               floatfmt=('.0f', '.0f', '.4f', '.4f', '.4f', '.4f', '.4f', '.4f', '.4f'))}
+{df.describe().transpose().to_markdown(floatfmt=('.0f', '.0f', '.4f', '.4f', '.4f', '.4f', '.4f', '.4f', '.4f'))}
 """
             full_markdown.append(markdown)
 
@@ -212,9 +211,11 @@ This certificate confirms that the codechecker could independently reproduce the
             if not op.splitext(fname)[1].lower() in extensions:
                 continue
             comment = entry["comment"]
+            heading = f"""### `{fname}`
+{('Author comment: *' + comment + '*') if comment else ' '}"""
             full_text.extend(
                 [
-                    r"![" + r"Author comment: " + comment + r"]" + r"(outputs/" + fname + r")",
+                    heading + r"![" + r"Author comment: " + comment + r"]" + r"(outputs/" + fname + r")",
                     "",
                 ]
             )
