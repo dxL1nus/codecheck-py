@@ -18,6 +18,10 @@
 
 #show raw: set text(font: "Ubuntu Mono")
 
+#show raw.where(block: false): text.with(
+  weight: "bold"
+)
+
 #show raw.where(block: true): block.with(
   fill: luma(248),
   inset: 10pt,

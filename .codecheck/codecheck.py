@@ -84,6 +84,10 @@ class Codecheck:
                 base_dir
             )
 
+    def get_formatted_summary(self):
+        """Remove additional whitespaces and newline characters from the summary."""
+        return self.conf['summary'].strip().replace("\n", " ")
+
     def title(self):
         """
         Markdown title with the certificate number, the doi of the report, and the CODECHECK
@@ -112,7 +116,7 @@ Item | Value
             f"Repository | {url_link(self.conf['repository'])}",
             f"Codechecker(s) | {multiple_name_orcid(self.conf['codechecker'])}",
             f"Date of check | {datetime.fromisoformat(self.conf['check_time']).date()}",
-            f"Summary | {self.conf['summary'].strip()}",
+            f"Summary | {self.get_formatted_summary()}",
         ]
         return Markdown(summary_header + "\n".join(summary_rows))
 
@@ -150,7 +154,7 @@ File | Comment | Size (b)
         """
         Markdown rendering of the `summary` field in `codecheck.yml`.
         """
-        return Markdown(self.conf["summary"].strip())
+        return Markdown(self.get_formatted_summary())
 
     def citation(self):
         """
