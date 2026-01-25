@@ -47,6 +47,14 @@ TODO add summary
 
 *TODO*
 
+Here is an example code block using Python.
+```python
+def fahrenheit_to_celsius(fahrenheit):
+  return (fahrenheit - 32) * 5 / 9
+
+print(fahrenheit_to_celsius(77))
+```
+
 ## Recommendations to the authors
 
 *TODO*

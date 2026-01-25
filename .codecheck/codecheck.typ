@@ -16,6 +16,15 @@
   font: "Latin Modern Math"
 )
 
+#show raw: set text(font: "Ubuntu Mono")
+
+#show raw.where(block: true): block.with(
+  fill: luma(248),
+  inset: 10pt,
+  radius: 0pt,
+  width: 100%,
+)
+
 // style the tables
 // See the strokes section for details on this!
 #let frame(stroke) = (x, y) => (
