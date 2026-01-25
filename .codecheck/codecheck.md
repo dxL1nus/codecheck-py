@@ -1,5 +1,5 @@
 # CODECHECK certificate 2025-023
-## [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
+## [https://doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
 [![CODECHECK logo](codecheck_logo.svg)](https://codecheck.org.uk)
 
 
@@ -14,8 +14,8 @@ Item | Value
 :--- | :----
 Title | *FIXME add title*
 Author(s) | TODO (ORCID: 0123-4567-8910-1112)
-Reference | [doi.org/10.1234/example](https://doi.org/10.1234/example)
-Repository | [github.com/example/repo](https://github.com/example/repo)
+Reference | [https://doi.org/10.1234/example](https://doi.org/10.1234/example)
+Repository | [https://github.com/example/repo](https://github.com/example/repo)
 Codechecker(s) | FIXME (ORCID: 0123-4567-8910-1112), SOMEONE ELSE (ORCID: 0123-4567-8910-1112)
 Date of check | 2023-11-15
 Summary | TODO add summary
@@ -56,7 +56,7 @@ TODO add summary
 
 
 
-FIXME, SOMEONE ELSE (2023). CODECHECK Certificate 2025-023. Zenodo. [doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
+FIXME, SOMEONE ELSE (2023). CODECHECK Certificate 2025-023. Zenodo. [https://doi.org/10.5281/zenodo.14900193](https://doi.org/10.5281/zenodo.14900193)
 
 
 

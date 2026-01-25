@@ -2,14 +2,19 @@
 #import "@preview/pubmatter:0.2.2"
 #import "@preview/wrap-it:0.1.1": wrap-content, wrap-top-bottom
 
-#set text(
-  lang: "en",
-)
 #set page("a4", numbering: "1")
 
 #show figure.caption: set text(size: 10pt)
 
-#set text(font: "New Computer Modern")
+#set text(
+  font: "Latin Modern Roman",
+  lang: "en",
+  size: 10pt
+)
+
+#show math.equation: set text(
+  font: "Latin Modern Math"
+)
 
 // style the tables
 // See the strokes section for details on this!
