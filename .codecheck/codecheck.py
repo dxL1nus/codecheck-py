@@ -8,6 +8,7 @@ from pathlib import Path
 import yaml
 from IPython.display import Markdown
 import pandas as pd
+import session_info2 as si
 
 from validation import CodecheckValidator
 from manifest import ManifestProcessor
@@ -175,6 +176,16 @@ File | Comment | Size (b)
             """
 This certificate confirms that the codechecker could independently reproduce the results of a computational analysis given the data and code from a third party. A CODECHECK does not check whether the original computation analysis is correct. However, as all materials required for the reproduction are freely availableby following the links in this document, the reader can then study for themselves the code and data."""
         )
+    
+    def session_info(self):
+        """
+        Markdown formatted session info
+        """
+        return Markdown(f"""```bash
+{si.session_info(os=True, cpu=True, gpu=True, dependencies=True)}
+```
+"""
+)
 
     def csv_files(self, **kwds):
         """
@@ -361,3 +372,7 @@ This certificate confirms that the codechecker could independently reproduce the
             markdown += f"- `{entry['file']}` ({size_kb:.1f} KB)\n"
 
         return Markdown(markdown)
+    
+    def acknowledge_sponsors(self):
+        """The sponsoring acknowledgement."""
+        return Markdown("CODECHECK is financially supported by the Mozilla foundation.")

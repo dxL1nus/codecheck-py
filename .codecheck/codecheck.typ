@@ -97,7 +97,7 @@
       center,
       h
     )
-  } else if h.level == 2 and h.body == [Manifest files] {
+  } else if h.level == 2 and (h.body == [Manifest files] or h.body == [Acknowledgements]) {
     pagebreak()
     h
   } else {
