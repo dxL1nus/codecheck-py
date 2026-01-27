@@ -14,4 +14,6 @@ dependencies:
   - pytest>=7.0
   - pytest-cov
   - requests
+  - session-info2
+  - ipywidgets
  
