@@ -1,2 +1,5 @@
-
 __pycache__/
+outputs/*
+.codecheck/outputs/*
+*.pdf
+.codecheck/*.md
